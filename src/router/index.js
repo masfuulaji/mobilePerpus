@@ -1,8 +1,21 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Splash} from '../pages';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Home, Splash, Book, Category} from '../pages';
+import {BottomNavigator} from '../components';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const MainApp = () => {
+  return (
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Book" component={Book} options={{title: 'Library'}} />
+      <Tab.Screen name="Category" component={Category} />
+    </Tab.Navigator>
+  );
+};
 
 const Router = () => {
   return (
@@ -13,8 +26,8 @@ const Router = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="MainApp"
+        component={MainApp}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

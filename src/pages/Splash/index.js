@@ -5,7 +5,7 @@ import Logo from '../../assets/image/shipit.jpg';
 export default function Splash(props) {
   useEffect(() => {
     setTimeout(() => {
-      props.navigation.navigate('Home');
+      props.navigation.navigate('MainApp');
     }, 1000);
   });
   return (

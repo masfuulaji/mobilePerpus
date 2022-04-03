@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {fonts} from '../../../utils';
 
 const TabItem = ({isFocused, onPress, onLongPress, label}) => {
   const MenuIcon = () => {
@@ -48,5 +49,6 @@ const styles = StyleSheet.create({
     color: isFocused ? '#144f46' : '#fff',
     fontSize: 12,
     marginTop: 3,
+    fontFamily: fonts.primary.bold,
   }),
 });

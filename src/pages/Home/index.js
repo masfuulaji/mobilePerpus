@@ -1,11 +1,12 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Header} from '../../components';
+import {BannerSlider, Header} from '../../components';
 
 export default function Home() {
   return (
     <View style={styles.page}>
       <Header />
+      <BannerSlider />
     </View>
   );
 }

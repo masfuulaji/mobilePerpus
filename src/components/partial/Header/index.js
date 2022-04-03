@@ -1,7 +1,7 @@
 import {StyleSheet, TextInput, View} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {responsiveHeight} from '../../../utils';
+import {responsiveHeight, fonts} from '../../../utils';
 import {Button, Space} from '../../shared';
 
 const Header = () => {
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
   },
   input: {
     fontSize: 16,
+    fontFamily: fonts.primary.regular,
   },
 });
